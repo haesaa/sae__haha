@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Node.js
+node_modules/
+dist/
+build/
+npm-debug.log*
+
+# Environment Variables / Secrets
+.env
+.env.*
+!.env.example
+secrets.json
+credentials.json
+*.pem
+*.key
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE & Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Local Data / Database
+*.sqlite3
+*.db
+*.pkl
+
+# AI Assistants / Agents
+.claude/
+.gemini/
+
+# OS / System Files
+.DS_Store
+Thumbs.db
