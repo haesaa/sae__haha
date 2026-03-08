@@ -1,0 +1,21 @@
+{
+    // [체크포인트] 파이프라인 중간 저장 — 에이전트가 이 파일을 읽고 이어서 작업한다
+    "task_id": "skill-gen_{YYYYMMDD-HHmm}", // 작업 고유 ID (예: skill-gen_20260228-1430)
+    "last_completed": "{00|01|02|03|04|05}", // 마지막 완료 단계
+    "next_step": "{01|02|03|04|05}-{name}.md", // 다음 실행할 스킬 파일명
+    "token_used_estimate": 0, // 추정 사용 토큰 수
+    "token_remaining_estimate": 10000, // 추정 잔여 토큰 수
+    // [산출물 현황] 어디까지 만들어졌는지
+    "artifacts": {
+        "analysis": null, // "work/analysis/mcp-result.json" 또는 null
+        "system_prompt": null, // "work/analysis/system-prompt.md" 또는 null
+        "skill_draft": null, // "work/forge/SKILL.md" 또는 null
+        "verification": null // "work/verify/verify-report.json" 또는 null
+    },
+    // [다음 작업 지시] 재개 시 에이전트가 읽는 부분
+    "resume_instructions": "skills/{next_step}을 읽고 지시에 따라 실행하라. 잔여 토큰 {token_remaining_estimate}이므로 토큰 효율을 우선하라.",
+    // [에러 로그] 발생한 오류 기록
+    "errors": [],
+    // [상태] "in_progress" | "completed" | "failed" | "token_limit"
+    "status": "in_progress"
+}
